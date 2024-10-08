@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 def load(dataset="data/match_results.csv", dataset_2="data/match_results_2019.csv"):
     payload = pd.read_csv(dataset, delimiter=",", skiprows=1)
     payload2 = pd.read_csv(dataset_2, delimiter=",", skiprows=1)
-    load_dotenv()
+    load_dotenv(dotenv_path='.env')
     server_h = os.getenv("SERVER_HOSTNAME")
     access_token = os.getenv("ACCESS_TOKEN")
     http_path = os.getenv("HTTP_PATH")
