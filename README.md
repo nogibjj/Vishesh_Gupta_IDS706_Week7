@@ -58,4 +58,5 @@ Additionally we have create a few more make commands that are:
 
 ## References 
 https://github.com/nogibjj/sqlite-lab
+https://learn.microsoft.com/en-us/azure/databricks/dev-tools/python-sql-connector
 

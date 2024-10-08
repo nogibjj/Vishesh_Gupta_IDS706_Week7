@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/visheshgupta/Desktop/ID706/Vishesh_Gupta_IDS706_Week5'
+make: Entering directory `/Users/visheshgupta/Desktop/Vishesh_Gupta_IDS706_Week6'
 pip install --upgrade pip &&\
 		pip install -r requirements.txt
-make: Leaving directory `/Users/visheshgupta/Desktop/ID706/Vishesh_Gupta_IDS706_Week5'
+make: Leaving directory `/Users/visheshgupta/Desktop/Vishesh_Gupta_IDS706_Week6'
  
