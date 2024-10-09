@@ -31,16 +31,38 @@ def test_query():
             "python","python_main.py",
             "query",
             """
-            SELECT m1.Team1 AS home_team, m1.Team2 AS away_team,
-            AVG(CASE 
-                WHEN CAST(SPLIT_PART(m1.FT, '-', 1) AS INTEGER) > CAST(SPLIT_PART(m1.FT, '-', 2) AS INTEGER) THEN 1
-                ELSE 0
-                END) AS avg_home_team_wins,
-            COUNT(*) AS total_matches_played
-            FROM MatchResultsDB m1
-            JOIN MatchResults2019DB m2 ON m1.Team1 = m2.Team1 
-                                    AND m1.Team2 = m2.Team2
-            GROUP BY m1.Team1, m1.Team2
+            WITH all_matches AS (
+                SELECT '2019' AS season, Team1 AS team, Team2 AS opponent, 
+                    CAST(SPLIT_PART(FT, '-', 1) AS INT) AS goals_scored,
+                    CAST(SPLIT_PART(FT, '-', 2) AS INT) AS goals_conceded
+                FROM MatchResults2019DB
+                UNION ALL
+                SELECT 'previous' AS season, Team1 AS team, Team2 AS opponent, 
+                    CAST(SPLIT_PART(FT, '-', 1) AS INT) AS goals_scored,
+                    CAST(SPLIT_PART(FT, '-', 2) AS INT) AS goals_conceded
+                FROM MatchResultsDB
+            ),
+            team_matches AS (
+                SELECT team, opponent, 
+                    AVG(goals_scored) AS avg_goals_scored, 
+                    COUNT(*) AS total_matches_played
+                FROM all_matches
+                WHERE team IN (
+                    SELECT DISTINCT team FROM (
+                        SELECT Team1 AS team FROM MatchResults2019DB
+                        UNION ALL
+                        SELECT Team2 AS team FROM MatchResults2019DB
+                        INTERSECT
+                        SELECT Team1 AS team FROM MatchResultsDB
+                        UNION ALL
+                        SELECT Team2 AS team FROM MatchResultsDB
+                    ) AS common_teams
+                )
+                GROUP BY team, opponent
+            )
+
+            SELECT team, opponent, avg_goals_scored, total_matches_played
+            FROM team_matches
             ORDER BY total_matches_played DESC
             LIMIT 10;
             """,
