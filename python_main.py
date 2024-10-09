@@ -13,7 +13,7 @@ def handle_arguments(args):
         "action",
         choices=[
             "extract",
-            "transform_load",
+            "load",
             "query"
         ],
     )
@@ -34,7 +34,7 @@ def main():
     if args.action == "extract":
         print("Extracting data...")
         extract()
-    elif args.action == "transform_load":
+    elif args.action == "load":
         print("Transforming data...")
         load()
     elif args.action == "query":
