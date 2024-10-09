@@ -50,6 +50,7 @@ team_matches AS (
 
 The query returns the average goals scored by each team against specific opponents and the total number of matches played, allowing analysis of team performance consistency. You can check the results in the query log [here](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week6/blob/main/query_log.md).
 
+```
 Vishesh_Gupta_IDS706_Week5/
 ├── .devcontainer/
 │   ├── devcontainer.json
