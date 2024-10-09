@@ -15,9 +15,12 @@ def extract(url="https://raw.githubusercontent.com/footballcsv/england/refs/head
     with requests.get(url_2) as r:
         with open(file_path_2, "wb") as f:
             f.write(r.content)
-    df = pd.read_csv(file_path_2)
+    df = pd.read_csv(file_path)
+    df_2 = pd.read_csv(file_path_2)
 
-    df_subset = df.head(25)
+    df_subset = df.head(100)
+    df_subset_2 = df.head(100)
 
-    df_subset.to_csv(file_path_2, index=False)
+    df_subset.to_csv(file_path, index=False)
+    df_subset_2.to_csv(file_path_2, index=False)
     return file_path, file_path_2

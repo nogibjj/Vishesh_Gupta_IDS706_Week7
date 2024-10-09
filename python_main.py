@@ -37,7 +37,7 @@ def main():
     elif args.action == "transform_load":
         print("Transforming data...")
         load()
-    elif args.action == "general_query":
+    elif args.action == "query":
         query(args.query)
 
     else:
