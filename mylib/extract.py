@@ -19,7 +19,7 @@ def extract(url="https://raw.githubusercontent.com/footballcsv/england/refs/head
     df_2 = pd.read_csv(file_path_2)
 
     df_subset = df.head(100)
-    df_subset_2 = df.head(100)
+    df_subset_2 = df_2.head(100)
 
     df_subset.to_csv(file_path, index=False)
     df_subset_2.to_csv(file_path_2, index=False)
