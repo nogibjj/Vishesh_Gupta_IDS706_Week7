@@ -16,7 +16,7 @@ def test_extract():
 def test_load():
     """Test transform_load()"""
     result = subprocess.run(
-        ["python", "python_main.py", "transform_load"],
+        ["python", "python_main.py", "load"],
         capture_output=True,
         text=True,
         check=True,

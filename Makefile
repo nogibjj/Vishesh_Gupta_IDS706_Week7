@@ -27,10 +27,3 @@ generate_and_push:
 	else \
 		echo "No changes to commit. Skipping commit and push."; \
 	fi
-
-
-extract:
-	python python_main.py extract
-
-load: 
-	python python_main.py load

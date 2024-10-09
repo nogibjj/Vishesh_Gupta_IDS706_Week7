@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Oct  9 18:16:49 2024
+# Make data base, printed on Wed Oct  9 18:46:01 2024
 
 # Variables
 
@@ -118,8 +118,6 @@ MFLAGS = -Rrqp
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.7582916.7582922
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -149,7 +147,7 @@ APPLICATIONINSIGHTS_CONFIGURATION_CONTENT = {}
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=3/93=3%
+# Load=67/1024=7%, Rehash=0, Collisions=3/92=3%
 
 # Pattern-specific Variable Values
 
@@ -298,6 +296,6 @@ install:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Oct  9 18:16:49 2024
+# Finished Make data base on Wed Oct  9 18:46:01 2024
 
  
