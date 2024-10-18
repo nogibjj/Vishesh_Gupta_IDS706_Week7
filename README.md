@@ -1,11 +1,43 @@
-# Vishesh_Gupta_IDS706_Week5
+# Vishesh_Gupta_IDS706_Week7
 
-[![CI](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week6/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week6/actions/workflows/cicd.yml)
 
-# Project: ETL-Query Pipeline with Databricks
+
+# Project: Package a Python Script into a Command-Line Tool
 
 ## Overview
-The goal of this project is to build an ETL (Extract, Transform, Load) and Query pipeline using cloud services like Databricks. It focuses on designing complex SQL queries for a MySQL database, involving joins, aggregation, and sorting, applied to match results data.
+The goal of this project is to build an ETL (Extract, Transform, Load) and Query pipeline using cloud services like Databricks. It focuses on designing complex SQL queries for a MySQL database, involving joins, aggregation, and sorting, applied to match results data and write a package for a python script into a Command-Line Tool
+
+## CLI Tool
+
+To enable the CLI command tool, you’ll first need to set up the project by running:
+
+```bash
+python setup.py develop
+```
+After this, the project can be executed using the command etl_query from the terminal.
+
+### Usage
+
+To run the ETL process using the CLI, use the command format:
+
+```bash
+etl_query <command>
+```
+The script supports the following operations:
+
+- extract: Pull data from the source.
+- transform_load: Process and load data into the destination.
+- query: Run a general SQL query.
+
+### Example screenshots of results:
+
+![Test Image 3](results_CLI.png)
+
+However when we do run 
+```bash
+etl_query query "<SQL_query>"
+```
+You must replace "<SQL_query>" with the SQL statement you wish to execute
 
 ## Complex SQL Query
 This query analyzes match results over multiple seasons to calculate the average goals scored by teams that participated in both 2019 and previous seasons.
@@ -75,6 +107,8 @@ Vishesh_Gupta_IDS706_Week5/
 ├── requirements.txt
 ├── MatchResultsDB.db
 └── main_test.py
+├── setup.py
+└── results_CLI.png
 ```
 
 ## Check format and test errors 

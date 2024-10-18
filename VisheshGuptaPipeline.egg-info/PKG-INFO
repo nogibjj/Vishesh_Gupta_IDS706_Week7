@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: VisheshGuptaPipeline
+Version: 0.1.0
+Summary: ETLpipline
+Author: VisheshGupta
+Author-email: vg157@duke.edu
+Requires-Dist: databricks-sql-connector
+Requires-Dist: pandas
+Requires-Dist: python-dotenv
