@@ -80,10 +80,10 @@ team_matches AS (
   - `avg_goals_scored`: Average goals scored by the team across all matches.
   - `total_matches_played`: Number of matches played by the team.
 
-The query returns the average goals scored by each team against specific opponents and the total number of matches played, allowing analysis of team performance consistency. You can check the results in the query log [here](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week6/blob/main/query_log.md).
+The query returns the average goals scored by each team against specific opponents and the total number of matches played, allowing analysis of team performance consistency. You can check the results in the query log [here](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week7/blob/main/query_log.md).
 
 ```
-Vishesh_Gupta_IDS706_Week5/
+Vishesh_Gupta_IDS706_Week7/
 ├── .devcontainer/
 │   ├── devcontainer.json
 │   └── Dockerfile
