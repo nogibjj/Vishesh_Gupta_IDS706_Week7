@@ -104,11 +104,11 @@ Vishesh_Gupta_IDS706_Week5/
 ├── test_results.md
 ├── query_log.md
 ├── README.md
+├── setup.py
+├──results_CLI.png
 ├── requirements.txt
 ├── MatchResultsDB.db
 └── main_test.py
-├── setup.py
-└── results_CLI.png
 ```
 
 ## Check format and test errors 
