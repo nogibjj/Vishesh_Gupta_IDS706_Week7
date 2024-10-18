@@ -1,6 +1,6 @@
 # Vishesh_Gupta_IDS706_Week7
 
-
+[![CI](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week7/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Vishesh_Gupta_IDS706_Week7/actions/workflows/cicd.yml)
 
 # Project: Package a Python Script into a Command-Line Tool
 
